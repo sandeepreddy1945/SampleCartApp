@@ -1,0 +1,29 @@
+<h1 mat-dialog-title style="background: teal; text-align: center;">
+	Login Dialog</h1>
+<mat-progress-bar mode="indeterminate" [style.display]="hideProgressBar ? 'none' : 'block'"></mat-progress-bar>
+<mat-dialog-content> <mat-card class="example-card">
+<img mat-card-image src="../../assets/img/login.jpg"
+	alt="Login Page Pic" class="image-size"> <mat-card-content>
+<form name="loginForm">
+	<mat-form-field class="full-width"> <input matInput
+		placeholder="Login Email" [formControl]="email" name="loginName">
+	<mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+	</mat-form-field>
+
+	<mat-form-field class="full-width"> <input matInput
+		placeholder="Login Password" [formControl]="password"
+		[type]="hide ? 'text' : 'password'"> <mat-icon matSuffix
+		(click)="hide = !hide">{{hide ? 'visibility' :
+	'visibility_off'}}</mat-icon> <mat-error *ngIf="password.invalid">{{getPasswordErroMessage()}}</mat-error>
+	</mat-form-field>
+</form>
+</mat-card-content> <mat-card-actions>
+<button mat-button (click)="authenticate()">
+	<mat-icon>fingerprint</mat-icon>
+	Login
+</button>
+<button mat-button (click)="forgotPassword()">
+	<mat-icon>person</mat-icon>
+	Forgot Password
+</button>
+</mat-card-actions> </mat-card> </mat-dialog-content>

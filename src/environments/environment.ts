@@ -2,7 +2,11 @@
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
-
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 export const environment = {
-  production: false
+    production: false,
+    loginUrl: `http://localhost:8030/api/v1/authenticate`,
+    httpOptions: {
+        headers: new HttpHeaders( { 'Content-Type': 'application/x-www-form-urlencoded' } )
+    },
 };

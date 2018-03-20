@@ -1,0 +1,23 @@
+.fill-remaining-space {
+	flex: 1 1 auto;
+}
+
+.example-card {
+	width: 400px;
+}
+
+.example-header-image {
+	background-image: url('../../assets/img/sandeep.jpg');
+	background-size: cover;
+}
+
+.image-re-size {
+	height: 300px;
+	width: 300px;
+	align-content: center;
+}
+
+.footer {
+	bottom: 0px;
+	position: absolute;
+	}

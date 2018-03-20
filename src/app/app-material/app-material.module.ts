@@ -1,0 +1,66 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {
+    MatButtonModule,
+    MatCheckboxModule,
+    MatSidenavModule,
+    MatTableModule,
+    MatDialogModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatListModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatGridListModule,
+    MatProgressBarModule,
+    MatSelectModule,
+    MatSlideToggleModule,
+    MatRadioModule,
+    MatTooltipModule,
+    MatExpansionModule
+} from '@angular/material';
+
+@NgModule( {
+    imports: [
+        CommonModule,
+        MatButtonModule,
+        MatCheckboxModule,
+        MatSidenavModule,
+        MatTableModule,
+        MatDialogModule,
+        MatIconModule,
+        MatToolbarModule,
+        MatCardModule,
+        MatListModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatGridListModule,
+        MatProgressBarModule,
+        MatSelectModule,
+        MatSlideToggleModule,
+        MatRadioModule,
+        MatTooltipModule,
+        MatExpansionModule
+    ],
+    declarations: [],
+    exports: [MatButtonModule,
+        MatCheckboxModule,
+        MatSidenavModule,
+        MatTableModule,
+        MatDialogModule,
+        MatIconModule,
+        MatToolbarModule,
+        MatCardModule,
+        MatListModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatGridListModule,
+        MatProgressBarModule,
+        MatSelectModule,
+        MatSlideToggleModule,
+        MatRadioModule,
+        MatTooltipModule,
+        MatExpansionModule]
+} )
+export class AppMaterialModule { }

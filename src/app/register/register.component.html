@@ -1,0 +1,41 @@
+<h1 mat-dialog-title style="background: teal; text-align: center;">
+	Register Dialog</h1>
+<mat-dialog-content> <mat-card class="example-card">
+<mat-card-content>
+<form name="register">
+	<mat-form-field class="full-width"> <input matInput
+		placeholder="Choose Login Email" [formControl]="email"> <mat-error
+		*ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error> </mat-form-field>
+
+	<mat-form-field class="full-width"> <input matInput
+		placeholder="Choose Password" [formControl]="password"
+		[type]="hide ? 'text' : 'password'"> <mat-icon matSuffix
+		(click)="hide = !hide">{{hide ? 'visibility' :
+	'visibility_off'}}</mat-icon> <mat-error *ngIf="password.invalid">{{getPasswordErroMessage()}}</mat-error>
+	</mat-form-field>
+
+	<mat-form-field class="full-width"> <input matInput
+		placeholder="Choose Phone Number" [formControl]="phone" #phoneNum [maxLength]="10"
+		[type]="'number'">
+		 <mat-hint align="end">{{phoneNum.value?.length || 0}}/10</mat-hint>
+		 <mat-error *ngIf="phone.invalid">{{getPhoneErroMessage()}}</mat-error>
+	</mat-form-field>
+
+<div matTooltip="Select Your Gender">
+	<mat-form-field class="full-width"> <mat-select 
+		[(value)]="defaultGender"> <mat-option value="male">Male</mat-option>
+	<mat-option value="female">Female</mat-option> </mat-select>
+	<mat-hint align="end">{{'Gender'}}</mat-hint>
+	 </mat-form-field> </div>
+
+	<mat-form-field class="full-width"> <textarea matInput #address
+		placeholder="Address" [maxLength]="'255'"></textarea>
+		 <mat-hint align="end">{{address.value?.length || 0}}/255</mat-hint>
+		 </mat-form-field>
+</form>
+</mat-card-content> <mat-card-actions>
+<button mat-button>
+	<mat-icon>description</mat-icon>
+	Register
+</button>
+</mat-card-actions> </mat-card> </mat-dialog-content>

@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" > <mat-toolbar-row>
+<button mat-button><mat-icon>shopping_cart</mat-icon> Shopping Cart</button>
+<span class="fill-remaining-space"></span>
+<div matTooltip="Click Here to Open Login Dialog !">
+<button mat-button (click)="OnLoginClick()">
+	<mat-icon >fingerprint</mat-icon> Login
+</button>
+</div>
+<div matTooltip="Click Here to Open Register Dialog !">
+<button mat-button (click)="OnRegisterClick()">
+	<mat-icon>description</mat-icon> Register
+</button>
+</div>
+</mat-toolbar-row> </mat-toolbar>
+
+<app-front-cover></app-front-cover>
+<!-- Footer -->
